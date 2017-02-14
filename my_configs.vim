@@ -27,3 +27,7 @@ set laststatus=2
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ CWD:\ %r%{getcwd()}%h\  \ %l/%L
 au BufReadPost,FileReadPost * au InsertEnter * hi StatusLine ctermbg=Yellow
 au BufReadPost,FileReadPost * au InsertLeave * hi StatusLine ctermbg=White 
+" COMMENT   C/C++ using ctrl shift c
+map <C-C> :s/^/\/\//<Enter>
+" UNCOMMENT C/C++ using ctrl shift U
+map <C-U> :s/^\/\///<Enter>
