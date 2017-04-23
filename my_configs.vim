@@ -31,3 +31,14 @@ au BufReadPost,FileReadPost * au InsertLeave * hi StatusLine ctermbg=White
 "map <C-C> :s/^/\/\//<Enter>
 " UNCOMMENT C/C++ using ctrl shift U
 "map <C-U> :s/^\/\///<Enter>
+
+"show function name in c when f is pressed
+fun! ShowFuncName()
+  let lnum = line(".")
+  let col = col(".")
+  echohl ModeMsg
+  echo getline(search("^[^ \t#/]\\{2}.*[^:]\s*$", 'bW'))
+  echohl None
+  call search("\\%" . lnum . "l" . "\\%" . col . "c")
+endfun
+map f :call ShowFuncName() <CR>
