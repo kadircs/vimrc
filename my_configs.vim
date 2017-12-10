@@ -1,3 +1,8 @@
+let g:lasttab = 1
+"nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
+nmap <c-\> :exe "tabn ".g:lasttab<CR>
+au TabLeave * let g:lasttab = tabpagenr()
+
 set number
 set foldmethod=syntax
 colorscheme desert
