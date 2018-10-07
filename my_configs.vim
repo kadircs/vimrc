@@ -1,3 +1,4 @@
+set cmdheight=1
 "set mouse=a
 let g:lasttab = 1
 "nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
