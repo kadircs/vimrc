@@ -1,3 +1,5 @@
+autocmd BufNewFile,BufRead *.jdf set syntax=c 
+
 set cmdheight=1
 "set mouse=a
 let g:lasttab = 1
